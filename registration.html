@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/7978/7978734.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/auth.css">
+  <title>إنشاء حساب — sky7</title>
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand" href="/login">
+      <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="">
+      <span>sky7</span>
+    </a>
+
+    <p class="eyebrow">ابدأ رحلتك البصرية</p>
+    <h1>أنشئ حسابك</h1>
+
+    <form id="registrationForm">
+      <label for="name">الاسم الكامل</label>
+      <input id="name" required maxlength="60" autocomplete="name">
+
+      <label for="username">اسم المستخدم</label>
+      <input id="username" required minlength="3" maxlength="24"
+             autocomplete="username" placeholder="مثال: sky_photographer">
+
+      <label for="email">البريد الإلكتروني</label>
+      <input id="email" type="email" required autocomplete="email">
+
+      <label for="password">كلمة المرور</label>
+      <input id="password" type="password" required minlength="6"
+             autocomplete="new-password">
+
+      <label for="confirmPassword">تأكيد كلمة المرور</label>
+      <input id="confirmPassword" type="password" required minlength="6"
+             autocomplete="new-password">
+
+      <label for="bio">نبذة قصيرة <span class="muted">(اختياري)</span></label>
+      <textarea id="bio" maxlength="180" rows="3"
+                placeholder="أخبرنا عن شغفك بالتصوير..."></textarea>
+
+      <label for="profileImage">الصورة الشخصية <span class="muted">(اختياري)</span></label>
+      <input id="profileImage" type="file" accept="image/*">
+
+      <p id="formMessage" class="form-message" role="status"></p>
+      <button id="submitButton" class="primary-button" type="submit">
+        إنشاء الحساب
+      </button>
+    </form>
+
+    <p class="auth-switch">
+      لديك حساب بالفعل؟ <a href="/login">سجّل الدخول</a>
+    </p>
+  </main>
+
+  <script type="module" src="/js/register-page.js"></script>
+</body>
+</html>
