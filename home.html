@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/7978/7978734.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <title>الرئيسية — sky7</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/home">
+      <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="">
+      <span>sky7</span>
+    </a>
+    <nav class="top-actions">
+      <a class="nav-link active" href="/home">الرئيسية</a>
+      <a class="nav-link" href="/profile">ملفي</a>
+      <button id="logoutButton" class="quiet-button" type="button">خروج</button>
+    </nav>
+  </header>
+
+  <main class="home-layout">
+    <aside class="side-card welcome-card">
+      <div id="welcomeAvatar" class="avatar avatar-large">S</div>
+      <p class="muted">مرحبًا بك مجددًا</p>
+      <h2 id="welcomeName">في sky7</h2>
+      <a href="/profile">الملف الشخصي ←</a>
+    </aside>
+
+    <section class="feed">
+      <form id="postForm" class="glass-card composer">
+        <div class="composer-top">
+          <div id="composerAvatar" class="avatar">S</div>
+          <textarea id="caption" maxlength="500"
+                    placeholder="ماذا في بالك؟ شاركنا صورة من السماء أو الطبيعة..."
+                    required></textarea>
+        </div>
+
+        <label class="upload-label" for="postImage">＋ اختر صورة</label>
+        <input id="postImage" type="file" accept="image/*" hidden required>
+        <div id="imagePreview" class="image-preview"></div>
+
+        <div class="composer-footer">
+          <span id="uploadStatus" class="muted">الصورة تُضغط قبل النشر</span>
+          <button id="postButton" class="primary-button small-button" type="submit">
+            نشر الصورة
+          </button>
+        </div>
+      </form>
+
+      <div id="feed" class="feed-list">
+        <div class="glass-card empty-state">جارٍ تحميل الصور…</div>
+      </div>
+    </section>
+
+    <aside class="side-card inspiration-card">
+      <span class="eyebrow">لحظتك القادمة</span>
+      <h2>انظر إلى السماء.</h2>
+      <p class="muted">كل غيمة لها حكاية، وكل صورة بداية لمحادثة.</p>
+      <div class="sky-orb" aria-hidden="true"></div>
+    </aside>
+  </main>
+
+  <script type="module" src="/js/home.js"></script>
+</body>
+</html>
