@@ -1,0 +1,27 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "users": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.admin === true)",
+        ".write": "auth != null && ((auth.uid === $uid && !data.exists() && newData.child('uid').val() === auth.uid && newData.child('blocked').val() === false && newData.child('verified').val() === false) || auth.token.admin === true)"
+      }
+    },
+
+    "usernames": {
+      "$username": {
+        ".read": "auth != null",
+        ".write": "auth != null && ((!data.exists() && newData.val() === auth.uid) || auth.token.admin === true)"
+      }
+    },
+
+    "posts": {
+      ".read": "auth != null && root.child('users').child(auth.uid).child('blocked').val() !== true",
+      "$postId": {
+        ".write": "auth != null && root.child('users').child(auth.uid).child('blocked').val() !== true && ((!data.exists() && newData.child('userId').val() === auth.uid) || (data.exists() && data.child('userId').val() === auth.uid) || auth.token.admin === true)"
+      }
+    }
+  }
+}
