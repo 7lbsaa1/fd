@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/global.css">
+  <title>الحساب محظور — sky7</title>
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <div class="brand">
+      <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="">
+      <span>sky7</span>
+    </div>
+    <h1>تم حظر حسابك</h1>
+    <p class="muted">
+      تم حظر حسابك من استخدام الموقع. إذا كنت تعتقد أن هذا القرار تم بالخطأ
+      يمكنك التواصل مع الإدارة.
+    </p>
+    <a class="primary-button button-link"
+       href="https://www.facebook.com/profile.php?id=61584178882412&amp;locale=ar_AR"
+       target="_blank" rel="noopener noreferrer">التواصل معنا على Facebook</a>
+    <button id="logoutButton" class="quiet-button block-logout" type="button">
+      تسجيل الخروج
+    </button>
+  </main>
+  <script type="module">
+    import { logout } from "/js/auth.js";
+    document.getElementById("logoutButton").addEventListener("click", logout);
+  </script>
+</body>
+</html>
