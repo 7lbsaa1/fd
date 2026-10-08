@@ -1,0 +1,57 @@
+.auth-page {
+  display: grid;
+  place-items: center;
+  padding: 24px 14px;
+  min-height: 100vh;
+}
+
+.auth-card {
+  width: min(100%, 460px);
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(24, 27, 42, .97), rgba(12, 14, 24, .97));
+  box-shadow: 0 28px 100px rgba(0, 0, 0, .45);
+  animation: card-in .35s ease both;
+}
+
+.auth-card h1 { margin: 6px 0; font-size: 27px; }
+.auth-card form { display: grid; gap: 9px; margin-top: 23px; }
+.auth-card label { margin-top: 8px; color: #d7d7e0; font-size: 13px; }
+.auth-card input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  outline: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--text);
+  background: rgba(255,255,255,.035);
+}
+.auth-card input[type="file"] { padding: 8px; }
+.auth-card .primary-button { margin-top: 8px; }
+.auth-switch { margin: 22px 0 0; color: var(--muted); text-align: center; font-size: 13px; }
+.form-message { min-height: 20px; margin: 5px 0 0; color: #ff91a9; font-size: 13px; }
+.text-button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 4px 7px;
+  border: 0;
+  color: #ff9db6;
+  background: transparent;
+  font-size: 12px;
+}
+.password-field { position: relative; }
+.password-field input { padding-left: 68px; }
+.block-logout { width: 100%; margin-top: 10px; }
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .auth-card { padding: 25px 20px; }
+}
