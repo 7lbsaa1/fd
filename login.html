@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a12">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/7978/7978734.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/auth.css">
+  <title>تسجيل الدخول — sky7</title>
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand" href="/login">
+      <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="">
+      <span>sky7</span>
+    </a>
+
+    <p class="eyebrow">مجتمع الصور والطبيعة</p>
+    <h1>أهلًا بعودتك</h1>
+    <p class="muted">سجّل الدخول لمتابعة لحظات السماء الجميلة.</p>
+
+    <form id="loginForm">
+      <label for="email">البريد الإلكتروني</label>
+      <input id="email" type="email" autocomplete="email" required
+             placeholder="name@example.com">
+
+      <label for="password">كلمة المرور</label>
+      <div class="password-field">
+        <input id="password" type="password" autocomplete="current-password"
+               required placeholder="••••••••">
+        <button id="togglePassword" class="text-button" type="button">إظهار</button>
+      </div>
+
+      <p id="formMessage" class="form-message" role="status"></p>
+      <button id="submitButton" class="primary-button" type="submit">
+        تسجيل الدخول
+      </button>
+    </form>
+
+    <p class="auth-switch">
+      ليس لديك حساب؟ <a href="/registration">أنشئ حسابًا</a>
+    </p>
+  </main>
+
+  <script type="module" src="/js/login-page.js"></script>
+</body>
+</html>
